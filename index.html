@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pIC50 and IC50 Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>pIC50 and IC50 Converter</h1>
+    <p>Convert between pIC50 and IC50 values.</p>
+    
+    <!-- pIC50 to IC50 Converter -->
+    <div class="converter">
+      <h2>pIC50 to IC50</h2>
+      <form id="pic50-to-ic50-form">
+        <label for="pic50">pIC50 Value:</label>
+        <input type="number" id="pic50" step="0.01" placeholder="Enter pIC50" required>
+        <button type="submit">Convert to IC50</button>
+      </form>
+      <div class="result">
+        <p><strong>IC50 in µM:</strong> <span id="ic50-um">-</span></p>
+        <p><strong>IC50 in nM:</strong> <span id="ic50-nm">-</span></p>
+      </div>
+    </div>
+
+    <!-- IC50 to pIC50 Converter -->
+    <div class="converter">
+      <h2>IC50 to pIC50</h2>
+      <form id="ic50-to-pic50-form">
+        <label for="ic50">IC50 Value:</label>
+        <input type="number" id="ic50" step="0.01" placeholder="Enter IC50" required>
+        <select id="ic50-unit">
+          <option value="uM">µM</option>
+          <option value="nM">nM</option>
+        </select>
+        <button type="submit">Convert to pIC50</button>
+      </form>
+      <div class="result">
+        <p><strong>pIC50:</strong> <span id="pic50-result">-</span></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
